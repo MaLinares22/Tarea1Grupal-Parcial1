@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Grupo 1 - Tarea1 - PW2 </title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1>Tarea 1 - Operaciones - Grupo 1</h1>
+       <p><strong>Integrantes:</strong>Manuel Alejandro Linares - 202410011073, Jenson Geovany Arita Reyes - 201230010015, Michael Javier Turcios - 202020010114</p>
+    </header>
+	
+	<!--Contenedor Principal del Menu-->
+	<div class="contenedor">
+		<div class="menu">
+			<button onclick="mostrar('binarios')" data-target="binarios">Binarios</button>
+			<button onclick="mostrar('numeros')">Mayores, Menores y Repetidos</button>
+			<button onclick="mostrar('hipotenusas')">Hipotenusas</button>
+		</div>
+		
+		<!--Formulario para los Binarios -->
+		<div id="binarios" class="seccion oculto">
+			<h2>Conversion de Binarios</h2>
+			
+			<form action="ServletBinario" method="post">
+				<select name ="operacion">
+					<option value="ADecimal">Binario -> Decimal</option>
+					<option value="ABinario">Decimal -> Binario</option>
+				</select><br><br>
+				
+				<label>Numero:</label><br>
+					<input type="text" name="numero" placeholder="1000111" required><br><br>
+					<button type="submit">Calcular</button>
+			</form>
+		</div>
+		
+		<!--Formulario para Mayores, Menores y Repetidos-->
+		<div id="numeros" class="seccion oculto">
+			<h2>Mayores, Menores y Repetidos</h2>
+			
+			<form action="ServletNumeral" method="post">
+				<label>Operacion:</label><br>
+				
+                <select name="operacion" id="Seleccion" onchange="toggleNumeros()">
+                    <option value="maximo" selected>Mayor de  los 3 numeros</option>
+                    <option value="minimo">Menor de los 3 numeros</option>
+                    <option value="repetido">Valor que mas se repite</option>
+                </select><br><br>
+                
+                <div id="tresNumeros">
+                    <label>Numero 1:</label><br>
+                    <input type="number" name="num1"><br><br>
+                    
+                    <label>Numero 2:</label><br>
+                    <input type="number" name="num2"><br><br>
+                    
+                    <label>Numero 3:</label><br>
+                    <input type="number" name="num3"><br><br>
+                </div>
+                
+                <div id="muchosNumeros" style="display:none;">
+                    <label>Numeros (separados por coma):</label><br>
+                    <input type="text" name="numbers" placeholder="1,2,3" style="width:300px;"><br><br>
+                </div>
+                <button type="submit">Calcular</button>
+			</form>
+		</div>
+		
+		<!--Formulario para la Hipotenusa-->
+		<div id="hipotenusas" class="seccion oculto">
+			<h2>Calculo de Hipotenusas</h2>
+			
+			<form action="HipotenusaServlet" method="post">
+                <label>Cateto a:</label><br>
+                <input type="number" step="any" name="a" placeholder="3" required><br><br>
+                
+                <label>Cateto b:</label><br>
+                <input type="number" step="any" name="b" placeholder="4" required><br><br>
+                
+                <button type="submit">Calcular</button>
+            </form>
+		</div>
+	</div>
+	
+	<script src="script.js"></script>
+</body>
+</html>

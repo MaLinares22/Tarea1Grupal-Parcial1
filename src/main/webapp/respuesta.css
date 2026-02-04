@@ -1,0 +1,59 @@
+@charset "UTF-8";
+body{ 
+	font-family: Arial, sans-serif; 
+	margin: 40px; 
+	background-color: #f4f6f9; 
+}
+
+h1, h2, h3{ 
+	color: #2c3e50;
+}
+ 
+table{ 
+	border-collapse: collapse; 
+	width: 70%; 
+	margin: 20px 0;
+}
+
+th, td{ 
+	border: 1px solid #ddd; 
+	padding: 12px; 
+	text-align: center; 
+}
+
+th{ 
+	background-color: #3498db; 
+	color: white; 
+}
+  
+.info{ 
+	background-color: #f8f9fa; 
+	padding: 15px; 
+	border-radius: 5px; 
+	margin: 20px 0;
+}
+
+.formula{ 
+	background-color: #e8f4fc; 
+	padding: 15px; 
+	border-radius: 5px; 
+	margin: 15px 0; 
+	font-family: 'Courier New', monospace; 
+	font-size: 18px; 
+	text-align: center; 
+}
+
+.error{
+	background-color: #fde8e8; 
+	padding: 10px; 
+	border-radius: 5px; 
+	color: #c0392b; 
+}
+
+.advertencia{ 
+	background-color: #fff3cd; 
+	padding: 10px; 
+	border-radius: 5px; 
+	color: #856404; 
+	border: 1px solid #ffeaa7;
+}
